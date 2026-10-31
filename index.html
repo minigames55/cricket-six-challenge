@@ -1,28 +1,78 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07111d">
   <title>Cricket Six Challenge</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="game">
-    <h1>🏏 Cricket Six Challenge</h1>
-    <p class="tagline">Can you hit a SIX?</p>
 
-    <div class="scoreboard">
-      <div> SCORE <strong id="score">0</strong></div>
-      <div>BALLS <strong id="balls">12</strong></div>
-      <div>BEST <strong id="best">0</strong></div>
-    </div>
+  <main class="app">
 
-    <canvas id="ground" width="400" height="500"></canvas>
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-icon">🏏</span>
+        <div>
+          <h1>CRICKET <span>SIX</span></h1>
+          <small>CHALLENGE ARENA</small>
+        </div>
+      </div>
+      <div class="coin-box">🪙 <strong id="coins">0</strong></div>
+    </header>
 
-    <h2 id="message">Ready to play?</h2>
-    <button id="startBtn">START GAME</button>
-    <button id="hitBtn" disabled>🏏 HIT THE BALL</button>
-    <p class="hint">Tap HIT when the ball comes close to the batsman!</p>
+    <section class="match-info">
+      <div>
+        <small>GAME MODE</small>
+        <strong>SUPER SIX</strong>
+      </div>
+      <div class="difficulty">
+        <small>DIFFICULTY</small>
+        <select id="difficulty">
+          <option value="easy">Easy</option>
+          <option value="medium" selected>Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="score-panel">
+      <div class="score-main">
+        <small>YOUR SCORE</small>
+        <strong id="score">0</strong>
+      </div>
+      <div class="score-detail">
+        <div><small>WICKETS</small><strong id="wickets">0</strong></div>
+        <div><small>BALLS</small><strong id="balls">0/12</strong></div>
+        <div><small>BEST</small><strong id="best">0</strong></div>
+      </div>
+    </section>
+
+    <section class="stadium-wrap">
+      <canvas id="ground" width="800" height="900"></canvas>
+      <div class="stadium-label">LIVE MATCH</div>
+    </section>
+
+    <section class="commentary">
+      <span class="live-dot"></span>
+      <strong id="message">WELCOME TO THE ARENA</strong>
+    </section>
+
+    <section class="controls">
+      <button id="startBtn" class="start-btn">▶ START MATCH</button>
+      <button id="hitBtn" class="hit-btn" disabled>🏏 PLAY SHOT</button>
+    </section>
+
+    <p class="instruction">
+      Watch the incoming ball and tap PLAY SHOT at the perfect moment.
+    </p>
+
+    <footer>
+      CRICKET SIX CHALLENGE <span>•</span> SEASON 01
+    </footer>
+
   </main>
 
   <script src="game.js"></script>
