@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cricket Six Challenge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game">
+    <h1>🏏 Cricket Six Challenge</h1>
+    <p class="tagline">Can you hit a SIX?</p>
+
+    <div class="scoreboard">
+      <div> SCORE <strong id="score">0</strong></div>
+      <div>BALLS <strong id="balls">12</strong></div>
+      <div>BEST <strong id="best">0</strong></div>
+    </div>
+
+    <canvas id="ground" width="400" height="500"></canvas>
+
+    <h2 id="message">Ready to play?</h2>
+    <button id="startBtn">START GAME</button>
+    <button id="hitBtn" disabled>🏏 HIT THE BALL</button>
+    <p class="hint">Tap HIT when the ball comes close to the batsman!</p>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
